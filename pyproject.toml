@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiktok-account-analytics"
+version = "1.0.0"
+description = "Analisis reproducible de cuentas de TikTok a partir de exportaciones de Apify"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2,<3",
+  "numpy>=1.26,<3",
+  "matplotlib>=3.8,<4",
+  "tzdata>=2024.1",
+]
+
+[project.scripts]
+tiktok-analyze = "tiktok_analytics.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
