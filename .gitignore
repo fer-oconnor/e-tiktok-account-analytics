@@ -11,3 +11,10 @@ output/*
 !output/.gitkeep
 examples/sample_clockworks.json
 
+# Credenciales y claves privadas: nunca incluirlas en Git.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
